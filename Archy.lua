@@ -990,12 +990,7 @@ end
 -- ----------------------------------------------------------------------------
 function Archy:OpenOptions()
 	local optionsFrame = self.optionsFrame
-
-	if _G.Settings and _G.Settings.OpenToCategory then
-		_G.Settings.OpenToCategory(optionsFrame and optionsFrame.categoryID or "Archy")
-	elseif _G.InterfaceOptionsFrame_OpenToCategory then
-		_G.InterfaceOptionsFrame_OpenToCategory(optionsFrame)
-	end
+	Settings.OpenToCategory(optionsFrame and optionsFrame.categoryID or FOLDER_NAME)
 end
 
 -- ----------------------------------------------------------------------------
