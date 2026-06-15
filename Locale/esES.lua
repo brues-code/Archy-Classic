@@ -1,4 +1,5 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("Archy", "esES")
+local FOLDER_NAME = ...
+local L = LibStub("AceLocale-3.0"):NewLocale(FOLDER_NAME, "esES")
 if not L then return end
 
 L["\"Arrival Distance\""] = "\"Distancia para llegar\""

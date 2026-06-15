@@ -10,8 +10,8 @@ local pairs = _G.pairs
 local FOLDER_NAME, private = ...
 
 local LibStub = _G.LibStub
-local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
-local Archy = LibStub("AceAddon-3.0"):GetAddon("Archy")
+local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME, false)
+local Archy = LibStub("AceAddon-3.0"):GetAddon(FOLDER_NAME)
 
 -- ----------------------------------------------------------------------------
 -- Constants

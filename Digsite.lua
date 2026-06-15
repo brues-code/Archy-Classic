@@ -14,12 +14,12 @@ local pairs = _G.pairs
 local FOLDER_NAME, private = ...
 
 local LibStub = _G.LibStub
-local Archy = LibStub("AceAddon-3.0"):GetAddon("Archy")
+local Archy = LibStub("AceAddon-3.0"):GetAddon(FOLDER_NAME)
 
 local HereBeDragons = LibStub("HereBeDragons-2.0")
 local HereBeDragonsPins = LibStub("HereBeDragons-Pins-2.0")
 
-local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
+local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME, false)
 
 local Digsites = {}
 private.Digsites = Digsites

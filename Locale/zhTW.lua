@@ -1,4 +1,5 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("Archy", "zhTW")
+local FOLDER_NAME = ...
+local L = LibStub("AceLocale-3.0"):NewLocale(FOLDER_NAME, "zhTW")
 if not L then return end
 
 L["\"Arrival Distance\""] = "\"抵達距離\""
@@ -33,7 +34,6 @@ L["Available commands are:"] = "可用命令有："
 L["Background Color"] = "背景色"
 L["Background Opacity"] = "背景透明"
 L["Background Texture"] = "背景紋路"
-L["BINDING_HEADER_ARCHY"] = "考古助手Archy"
 L["BINDING_NAME_ARTIFACTS"] = "開啟文物面板"
 L["BINDING_NAME_DIGSITES"] = "開啟挖掘場面板"
 L["BINDING_NAME_OPTIONS"] = "設定Archy"

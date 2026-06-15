@@ -2,7 +2,8 @@ local debug = false
 --[===[@debug@
 debug = true
 --@end-debug@]===]
-local L = LibStub("AceLocale-3.0"):NewLocale("Archy", "enUS", true, debug)
+local FOLDER_NAME = ...
+local L = LibStub("AceLocale-3.0"):NewLocale(FOLDER_NAME, "enUS", true, debug)
 
 if not L then
 	return
@@ -36,7 +37,6 @@ L["Auto Hide Archy Frames in Combat"] = true
 L["AutoFill Key Stones"] = true
 L["AutoLoot Fragments and Key Stones"] = true
 L["Available commands are:"] = true
-L["BINDING_HEADER_ARCHY"] = "Archy"
 L["BINDING_NAME_ARTIFACTS"] = "Toggle Artifacts Panel"
 L["BINDING_NAME_DIGSITES"] = "Toggle Dig Sites Panel"
 L["BINDING_NAME_OPTIONS"] = "Configure Archy"

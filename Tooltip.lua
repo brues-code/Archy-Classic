@@ -16,16 +16,16 @@ local table = _G.table
 local LibStub = _G.LibStub
 
 local FOLDER_NAME, private = ...
-local Archy = LibStub("AceAddon-3.0"):GetAddon("Archy")
-local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
+local Archy = LibStub("AceAddon-3.0"):GetAddon(FOLDER_NAME)
+local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME, false)
 
 local QTip = LibStub("LibQTip-1.0")
 
-local LDB_object = LibStub("LibDataBroker-1.1"):NewDataObject("Archy", {
+local LDB_object = LibStub("LibDataBroker-1.1"):NewDataObject(FOLDER_NAME, {
 	type = "data source",
 	icon = [[Interface\Icons\trade_archaeology]],
 	iconCoords = { 0.075, 0.925, 0.075, 0.925 },
-	text = "Archy",
+	text = FOLDER_NAME,
 })
 
 private.LDB_object = LDB_object
@@ -284,7 +284,7 @@ function Archy:LDBTooltipShow()
 	tooltip:Clear()
 
 	local line = tooltip:AddHeader(".")
-	tooltip:SetCell(line, 1, ("%s%s%s"):format(_G.ORANGE_FONT_COLOR_CODE, "Archy", "|r") .. "*", "CENTER", num_columns)
+	tooltip:SetCell(line, 1, ("%s%s%s"):format(_G.ORANGE_FONT_COLOR_CODE, FOLDER_NAME, "|r") .. "*", "CENTER", num_columns)
 	tooltip:SetCellScript(line, 1, "OnMouseDown", Archy_cell_script, "mode")
 
 	if private.hasArchaeology then

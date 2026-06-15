@@ -10,9 +10,9 @@ local FOLDER_NAME, private = ...
 
 local LibStub = _G.LibStub
 
-local Archy = LibStub("AceAddon-3.0"):GetAddon("Archy")
+local Archy = LibStub("AceAddon-3.0"):GetAddon(FOLDER_NAME)
 local Dialog = LibStub("LibDialog-1.0")
-local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
+local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME, false)
 local LSM = LibStub("LibSharedMedia-3.0")
 
 -- ----------------------------------------------------------------------------
@@ -67,7 +67,7 @@ local function GetGeneralOptions()
 				desc = {
 					order = 0,
 					type = "description",
-					name = "Archy",
+					name = FOLDER_NAME,
 				},
 				show = {
 					order = 1,
@@ -1593,9 +1593,9 @@ local function GetMinimapOptions()
 					set = function(k, v)
 						generalSettings.icon.hide = v
 						if generalSettings.icon.hide then
-							LDBI:Hide("Archy")
+							LDBI:Hide(FOLDER_NAME)
 						else
-							LDBI:Show("Archy")
+							LDBI:Show(FOLDER_NAME)
 						end
 					end,
 					width = "double"
@@ -1695,11 +1695,11 @@ function Archy:SetupOptions()
 	ACFG:RegisterOptionsTable("Archy Profiles", LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db))
 
 	local ACD = LibStub("AceConfigDialog-3.0")
-	ACD:AddToBlizOptions("Archy General", _G.GENERAL_LABEL, "Archy")
-	ACD:AddToBlizOptions("Archy Artifacts", L["Artifacts"], "Archy")
-	ACD:AddToBlizOptions("Archy Dig Sites", L["Dig Sites"], "Archy")
-	ACD:AddToBlizOptions("Archy TomTom", L["TomTom Support"], "Archy")
-	ACD:AddToBlizOptions("Archy Minimap", _G.MINIMAP_LABEL, "Archy")
-	ACD:AddToBlizOptions("Archy Tooltips", L["Tooltip"], "Archy")
-	ACD:AddToBlizOptions("Archy Profiles", L["Profiles"], "Archy")
+	ACD:AddToBlizOptions("Archy General", _G.GENERAL_LABEL, FOLDER_NAME)
+	ACD:AddToBlizOptions("Archy Artifacts", L["Artifacts"], FOLDER_NAME)
+	ACD:AddToBlizOptions("Archy Dig Sites", L["Dig Sites"], FOLDER_NAME)
+	ACD:AddToBlizOptions("Archy TomTom", L["TomTom Support"], FOLDER_NAME)
+	ACD:AddToBlizOptions("Archy Minimap", _G.MINIMAP_LABEL, FOLDER_NAME)
+	ACD:AddToBlizOptions("Archy Tooltips", L["Tooltip"], FOLDER_NAME)
+	ACD:AddToBlizOptions("Archy Profiles", L["Profiles"], FOLDER_NAME)
 end
