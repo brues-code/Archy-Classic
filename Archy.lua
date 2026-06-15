@@ -20,13 +20,13 @@ local type = _G.type
 local LibStub = _G.LibStub
 
 local FOLDER_NAME, private = ...
-local Archy = LibStub("AceAddon-3.0"):NewAddon("Archy", "AceConsole-3.0", "AceEvent-3.0", "AceHook-3.0", "AceBucket-3.0", "AceTimer-3.0", "LibSink-2.0", "LibToast-1.0")
+local Archy = LibStub("AceAddon-3.0"):NewAddon(FOLDER_NAME, "AceConsole-3.0", "AceEvent-3.0", "AceHook-3.0", "AceBucket-3.0", "AceTimer-3.0", "LibSink-2.0", "LibToast-1.0")
 Archy.version = _G.GetAddOnMetadata(FOLDER_NAME, "Version")
-_G["Archy"] = Archy
+_G[FOLDER_NAME] = Archy
 
 local Dialog = LibStub("LibDialog-1.0")
 local HereBeDragons = LibStub("HereBeDragons-2.0")
-local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
+local L = LibStub("AceLocale-3.0"):GetLocale(FOLDER_NAME, false)
 local LDBI = LibStub("LibDBIcon-1.0")
 
 local gprint = print
@@ -102,7 +102,7 @@ do
 	FISHING_POLE_ITEM_TYPE_NAME = _G.GetItemSubClassInfo(ITEM_CLASS_WEAPON, ITEM_SUBCLASS_FISHING_POLE)
 end
 
-_G.BINDING_HEADER_ARCHY = "Archy"
+_G.BINDING_HEADER_ARCHY = FOLDER_NAME
 _G.BINDING_NAME_OPTIONSARCHY = L["BINDING_NAME_OPTIONS"]
 _G.BINDING_NAME_TOGGLEARCHY = L["BINDING_NAME_TOGGLE"]
 _G.BINDING_NAME_SOLVEARCHY = L["BINDING_NAME_SOLVE"]
@@ -709,7 +709,7 @@ function Archy:OnInitialize()
 	local about_panel = LibStub:GetLibrary("LibAboutPanel-2.0", true)
 
 	if about_panel then
-		self.optionsFrame = about_panel:CreateAboutPanel("Archy")
+		self.optionsFrame = about_panel:CreateAboutPanel(FOLDER_NAME)
 	end
 	self:DefineSinkToast(FOLDER_NAME, [[Interface\Archeology\Arch-Icon-Marker]])
 	self:SetSinkStorage(self.db.profile.general.sinkOptions)
@@ -753,7 +753,7 @@ function Archy:OnInitialize()
 
 	prevTheme = profileSettings.general and profileSettings.general.theme or private.DEFAULT_SETTINGS.profile.general.theme
 
-	LDBI:Register("Archy", private.LDB_object, profileSettings.general.icon)
+	LDBI:Register(FOLDER_NAME, private.LDB_object, profileSettings.general.icon)
 
     local survey_spell_name = GetSpellInfo(SURVEY_SPELL_ID);
 	do
