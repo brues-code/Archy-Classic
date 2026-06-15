@@ -567,7 +567,7 @@ function LDB_object:OnClick(button, down)
 			generalSettings.stealthMode = not generalSettings.stealthMode
 			Archy:ConfigUpdated()
 		elseif _G.IsControlKeyDown() then
-			_G.InterfaceOptionsFrame_OpenToCategory(Archy.optionsFrame)
+			Archy:OpenOptions()
 		else
 			generalSettings.show = not generalSettings.show
 			Archy:LDBTooltipShow()

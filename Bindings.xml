@@ -1,6 +1,6 @@
 <Bindings>
 	<Binding name="OPTIONSARCHY" header="ARCHY" category="ADDONS">
-		InterfaceOptionsFrame_OpenToCategory(Archy.optionsFrame)
+		Archy:OpenOptions()
 	</Binding>
 	<Binding name="TOGGLEARCHY" category="ADDONS">
 		Archy.db.profile.general.show = not Archy.db.profile.general.show
