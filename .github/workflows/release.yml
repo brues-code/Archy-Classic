@@ -20,7 +20,5 @@ jobs:
 
       - name: Package and release
         uses: BigWigsMods/packager@master
-        with:
-          args: -d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
